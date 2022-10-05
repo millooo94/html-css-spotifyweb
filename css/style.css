@@ -16,7 +16,7 @@ img {
 /* General Styles  */
 
 .text {
-    font-size: .8rem;
+    font-size: .6rem;
 }
 
 
@@ -62,11 +62,14 @@ aside .first-list {
 }
 
 .playlist {
-    margin-top: .5rem;
+    font-size: .7rem;
+    margin-top: 1.2rem;
+    color: white;
+    font-weight: 800;
 }
 
 .second-list li {
-    margin-top: .5rem;
+    margin-top: .9rem;
     color: #a3a3a3;
     font-weight: 500;
 }
@@ -113,6 +116,9 @@ aside .second-list {
     width: 25px;
     aspect-ratio: 1 / 1;
     background-color: #a3a3a3;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-right: .3rem;
 }
 
