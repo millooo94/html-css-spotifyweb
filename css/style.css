@@ -177,7 +177,7 @@ aside .block-down .profile::before {
     }
 
     .logo-small {
-        display:contents;
+        display:block;
     }
 
 
@@ -538,6 +538,7 @@ footer .block-center .down-bar {
     color: white;
     font-weight: 700;
     padding: .3rem;
+    opacity: 1;
 }
 
 
