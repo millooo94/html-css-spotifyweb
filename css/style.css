@@ -224,6 +224,8 @@ aside .block-down .profile::before {
     height: calc(100vh - 4rem);
     overflow-y: auto;
     padding: 4.5rem 1rem 1rem 1rem;
+    color: white;
+    background-color: #141922;
 }
 
 .contents ul {
@@ -438,6 +440,13 @@ footer .block-center .down-bar {
     width: 100%;
 }
 
+@media (max-width: 552px) {
+    .block-left .icons-block {
+        flex-direction: column;
+        gap: .2rem;
+    }
+}
+
 
 
 
@@ -551,10 +560,11 @@ footer .block-center .down-bar {
     position: fixed;
     inset: 0 0;
     height: 4.5rem;
+    padding: 1rem;
     background-color: black;
     opacity: .5;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
     align-items: center;
 }
 
@@ -565,8 +575,9 @@ footer .block-center .down-bar {
     border-radius: 20px;
     border: 2px solid white;
     color: white;
+    font-size: .8rem;
     font-weight: 700;
-    padding: .3rem;
+    padding: .5rem 2rem;
     opacity: 1;
     background-color: black;
 }
