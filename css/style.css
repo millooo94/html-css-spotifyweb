@@ -166,7 +166,23 @@ aside .block-down .profile::before {
 
 @media (max-width: 639px)  {
     aside {
-        flex-basis;: 40px
+        flex-basis: 40px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .first-list span {
+        display: none;
+    }
+
+    .playlist {
+        display: none;
+    }
+
+    .block-down {
+        display: none;
     }
 }
 
