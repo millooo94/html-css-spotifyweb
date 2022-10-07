@@ -95,32 +95,39 @@ aside .second-list li {
     font-weight: 500;
 }
 
-.home::before {
-    content: url('../img/home.svg');
+.home img {
     display: inline-block;
     width: 20px;
-    margin-right: .3rem;
 }
 
 .home {
+    display: flex;
+    gap: .3rem;
     color: white;
-    vertical-align: middle;
 }
 
-.search::before {
-    content: url('../img/search.svg');
+.search img {
     display: inline-block;
     width: 20px;
     color: #a3a3a3;
-    margin-right: .3rem;
 }
 
-.library::before {
-    content: url('../img/libreria.svg');
+.search {
+    display: flex;
+    gap: .3rem;
+    color: #a3a3a3;
+}
+
+.library img {
     display: inline-block;
     width: 20px;
     color: #a3a3a3;
-    margin-right: .3rem;
+}
+
+.library {
+    display: flex;
+    gap: .3rem;
+    color: #a3a3a3;
 }
 
 aside .second-list {
@@ -131,70 +138,72 @@ aside .second-list {
     line-height: 25px;
 }
 
-.create::before {
-    content: '\2b';
-    display: inline-flex;
+.create div {
+    display: flex;
     justify-content: center;
-    text-align: center;
-    width: 25px;
+    align-items: center;
+    width: 30px;
     aspect-ratio: 1 / 1;
     background-color: #a3a3a3;
     color: black;
-    font-size: 1.5rem;
-    font-weight: 700;
     margin-right: .3rem;
 }
 
-aside .block-down .install::before {
-    content: url('../img/download.svg');
+.create i {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+
+
+
+aside .block-down .install img {
     display: inline-block;
-    justify-content: center;
     width: 13px;
-    margin-right: .3rem;
 }
 
-.block-down .install {
+aside .block-down .install {
     display: flex;
+    gap: .3rem;
     align-items: center;
     margin-bottom: .5rem;
     color: #a3a3a3;
     padding-bottom: .3rem;
     border-bottom: 1px solid #a3a3a3;
-
 }
 
-aside .block-down .profile::before {
-    content: url('../img/profile.svg');
+aside .block-down .profile img {
     clip-path: circle();
     padding: .2em;
     background-color: #a3a3a3;
     display: inline-block;
-    width: 17px;
-    margin-right: .3rem;
+    width: 20px;
 }
 
 .block-down .profile {
     display: flex;
     align-items: center;
-    vertical-align: middle;
+    gap: .3rem;
     color: white;
     font-weight: 600;
 }
+
 
 
 /* Aside Hover  */
 
 .hv-wht:hover {
     color: white;
+    cursor: pointer;
 }
 
-aside .hv-wht:hover::before{
-    color: red;
-}
-
-aside .hv-wht-x:hover::before {
+.hv-wht:hover div {
     background-color: white;
 }
+
+
 
 
 /* Aside Media Queries */
@@ -224,7 +233,13 @@ aside .hv-wht-x:hover::before {
     }
 
     .block-down .install {
-        border: 0;
+        justify-content: center;
+    
+    }
+
+    .block-down .profile {
+        justify-content: center;
+      
     }
 
     .block-down .install span {
@@ -284,6 +299,7 @@ aside .hv-wht-x:hover::before {
 
 }
 
+
 .album-container-first {
     display: flex;
     flex-wrap: wrap;
@@ -330,11 +346,33 @@ aside .hv-wht-x:hover::before {
 
 
 .album-layover {
+    display: flex;
+    z-index: -20;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     background-color: black;
     opacity: 0.5;
+}
+
+.album-layover i {
+    color: white;
+    font-size: 3.5rem;
+    position: relative;
+}
+
+
+/* Contents hover */
+
+.contents ul li:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.img-container:hover .album-layover {
+    cursor: pointer;
+    z-index: 20;;
 }
 
 
@@ -364,27 +402,33 @@ aside .hv-wht-x:hover::before {
         flex-basis: calc(100% / 3 - 1.2rem);
         text-align: center;
     }
+
+    .album-container-first .album-block {
+        flex-basis: calc(50% - 1rem);
+    }
+    .album-container-second .album-block {
+        flex-basis: calc(50% - 1rem);
+    }
+    .album-container-third .album-block {
+        flex-basis: calc(50% - 1rem);
+    }
 }
 
-@media (min-width: 639px) and (max-width: 876px) {
+@media (min-width: 640px) and (max-width: 876px) {
 
     .contents ul .discover {
         flex-basis: 100%;
         text-align: center;
     }
 
-    .album-container-first .img-container {
-        flex-basis: calc(25% - 1rem);
+    .album-container-first .album-block {
+        flex-basis: calc(100% / 4 - 1rem);
     }
 
     .sinister, .cure {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
-
-
-
-
 
 
 /* Footer */
@@ -493,12 +537,10 @@ footer .block-center .down-bar .music-bar {
 }
 
 
-.block-center .music-bar .dot {
+.music-bar i {
     display: none;
-    clip-path: circle();
-    width: 1rem;
-    height: 1rem;
-    background-color: crimson;
+    font-size: .7rem;
+    color: white; 
 }
 
 
@@ -509,7 +551,6 @@ footer .block-center .down-bar .music-bar {
 }
 
 .block-center .music-bar .short {
-    display: inline-block;
     flex-basis: 25%;
     height: 3px;
     background-color: #c1c1c1;
@@ -535,7 +576,10 @@ footer .block-center .down-bar .music-bar {
 
 
 .block-right .music-bar {
+    min-width: 80px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     flex: 0 1 60%;
 }
 
@@ -546,11 +590,43 @@ footer .block-center .down-bar .music-bar {
 }
 
 .block-right .music-bar .short {
-    display: inline-block;
     flex-basis: 15%;
     height: 3px;
     background-color: #c1c1c1;
 }
+
+/* Footer Hover */
+
+.content-container .song-name:hover {
+    cursor: pointer;
+    color: white;
+    text-decoration: underline;
+}
+
+.icons-block i:hover {
+    cursor: pointer;
+    color: white;
+}
+
+
+.block-center .up-bar .play:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.music-bar:hover .short {
+    background-color: #598128;
+}
+
+.music-bar:hover i {
+    display: inline-block;
+}
+
+
+
+
+
+
 
 
 
@@ -689,9 +765,19 @@ footer .block-center .down-bar .music-bar {
     border-radius: 20px;
     border: 2px solid white;
     color: white;
-    font-size: .8rem;
+    font-size: .65rem;
     font-weight: 700;
-    padding: .5rem 2rem;
+    padding: .6rem 1.7rem;
+    margin-right: .1rem;
     opacity: 1;
     background-color: black;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Popup Hover */
+
+.popup .btn:hover {
+    cursor: pointer;
+    scale: 1.1;
 }
