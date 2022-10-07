@@ -27,8 +27,6 @@ body {
 
 
 
-
-
 /* Aside */
 
 aside {
@@ -59,6 +57,7 @@ aside .first-list {
     list-style: none;
     color: #a3a3a3;
     font-weight: 700;
+    position: relative;
 }
 
 aside .first-list li {
@@ -101,13 +100,25 @@ aside .second-list li {
 }
 
 .home {
+    width: 100%;
     display: flex;
     gap: .3rem;
     color: white;
+   
+}
+
+.lato {
+    width: 1px;
+    height: 26px;
+    background-color: #598128;
+    align-self: center;
+    position: absolute;
 }
 
 
-.search img {
+
+
+.search svg {
     display: inline-block;
     width: 20px;
     color: #a3a3a3;
@@ -119,7 +130,7 @@ aside .second-list li {
     color: #a3a3a3;
 }
 
-.library img {
+.library svg {
     display: inline-block;
     width: 20px;
     color: #a3a3a3;
@@ -161,7 +172,7 @@ aside .second-list {
 
 
 
-aside .block-down .install img {
+aside .block-down .install svg {
     display: inline-block;
     width: 13px;
 }
@@ -176,7 +187,7 @@ aside .block-down .install {
     border-bottom: 1px solid #a3a3a3;
 }
 
-aside .block-down .profile img {
+aside .block-down .profile svg {
     clip-path: circle();
     padding: .2em;
     background-color: #a3a3a3;
@@ -196,19 +207,18 @@ aside .block-down .profile img {
 
 /* Aside Hover  */
 
-.first-list img:hover {
-    color: white;
-
+ .first-list .hv-wht svg path:hover {
+    fill: red;
 }
 
-.hv-wht:hover {
+/* .hv-wht:hover {
     color: white;
     cursor: pointer;
 }
 
 .hv-wht:hover div {
     background-color: white;
-}
+} */
 
 
 
@@ -283,6 +293,20 @@ aside .block-down .profile img {
     gap: 1.2rem;
     list-style: none;
     margin-bottom: 1.5rem;
+}
+
+
+.on-evidence {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.underline {
+    width: 26px;
+    height: 2px;
+    background-color: #598128;
+    align-self: center;
 }
 
 
@@ -527,7 +551,7 @@ footer .block-center .up-bar {
 
 
 footer .block-center .down-bar {
-    height: 12px ;
+    
     display: flex;
     gap: 1rem;
     width: 100%;
@@ -539,6 +563,7 @@ footer .block-center .down-bar span {
 }
 
 footer .block-center .down-bar .music-bar {
+    height: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -585,6 +610,7 @@ footer .block-center .down-bar .music-bar {
 
 
 .block-right .music-bar {
+    height: 12px;
     min-width: 80px;
     display: flex;
     justify-content: space-between;
