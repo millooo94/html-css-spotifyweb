@@ -95,7 +95,7 @@ aside .second-list li {
     font-weight: 500;
 }
 
-.home img {
+.home svg {
     display: inline-block;
     width: 20px;
 }
@@ -105,6 +105,7 @@ aside .second-list li {
     gap: .3rem;
     color: white;
 }
+
 
 .search img {
     display: inline-block;
@@ -132,6 +133,7 @@ aside .second-list li {
 
 aside .second-list {
     list-style: none;
+
 }
 
 .create {
@@ -194,6 +196,11 @@ aside .block-down .profile img {
 
 /* Aside Hover  */
 
+.first-list img:hover {
+    color: white;
+
+}
+
 .hv-wht:hover {
     color: white;
     cursor: pointer;
@@ -216,7 +223,8 @@ aside .block-down .profile img {
     }
 
     aside .block-up .logo-small {
-        display:block;
+        display:flex;
+        justify-content: center;
         width: 20px;
     }
 
@@ -266,7 +274,6 @@ aside .block-down .profile img {
 }
 
 .contents ul {
-    word-wrap: break-word;
     font-size: .65rem;
     font-weight: 700;
     color: #c1c1c1;
@@ -277,6 +284,7 @@ aside .block-down .profile img {
     list-style: none;
     margin-bottom: 1.5rem;
 }
+
 
 .contents h2 {
     font-size: 1.2rem;
@@ -519,6 +527,7 @@ footer .block-center .up-bar {
 
 
 footer .block-center .down-bar {
+    height: 12px ;
     display: flex;
     gap: 1rem;
     width: 100%;
