@@ -15,9 +15,23 @@ img {
 
 /* General Styles  */
 
-.text {
+.text-xsmall {
+    font-size: .5rem;
+}
+
+.text-small {
+    font-size: .6rem;
+}
+
+.text-large {
+    font-size: 1.1rem;
+
+}
+
+.text-medium {
     font-size: .7rem;
 }
+
 
 
 body {
@@ -33,11 +47,23 @@ aside {
     flex: 0 0 160px;
     height: calc(100vh - 4rem);
     z-index: 20;
-    padding: .8rem;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
+}
+
+
+
+
+
+aside .logo-container {
+    border-top: 3px solid black;
+    padding-left: .4rem;
+    border-left: 3px solid black;
+    padding-top: .4rem;
+
 }
 
 aside .logo-small {
@@ -58,12 +84,17 @@ aside .first-list {
     color: #a3a3a3;
     font-weight: 700;
     position: relative;
+    
 }
 
 aside .first-list li {
     display: flex;
     align-items: center;
+    
+}
 
+svg {
+    display: block;
 }
 
 .home, .search {
@@ -71,19 +102,30 @@ aside .first-list li {
 }
 
 .playlist {
-    font-size: .7rem;
-    margin-top: 1.3rem;
+    margin-top: 1rem;
     color: white;
 
 }
 
+.playlist > span {
+    border-left: 3px solid black;
+    padding-left: .4rem;
+
+}
+
+aside .playlist .playlist-title {
+    font-weight: 700;
+}
+
 .playlist span {
-    font-size: .8rem;
-    font-weight: 800;
+    font-size: .7rem;
+    font-weight: 700;
 }
 
 aside .second-list li {
     font-weight: 700;
+    border-left: 3px solid black;
+    padding-left: .4rem;
 }
 
 .second-list li {
@@ -104,19 +146,9 @@ aside .second-list li {
     display: flex;
     gap: .3rem;
     color: white;
-   
+    border-left: 3px solid #598128;
+    padding-left: .4rem; 
 }
-
-.lato {
-    width: 1px;
-    height: 26px;
-    background-color: #598128;
-    align-self: center;
-    position: absolute;
-}
-
-
-
 
 .search svg {
     display: inline-block;
@@ -128,6 +160,8 @@ aside .second-list li {
     display: flex;
     gap: .3rem;
     color: #a3a3a3;
+    border-left: 3px solid black;
+    padding-left: .4rem;
 }
 
 .library svg {
@@ -140,22 +174,24 @@ aside .second-list li {
     display: flex;
     gap: .3rem;
     color: #a3a3a3;
+    border-left: 3px solid black;
+    padding-left: .4rem;
 }
 
 aside .second-list {
     list-style: none;
-
 }
 
-.create {
+.block-up .second-list .create {
     line-height: 25px;
+    margin-top: .5rem;
 }
 
 .create div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
+    width: 25px;
     aspect-ratio: 1 / 1;
     background-color: #a3a3a3;
     color: black;
@@ -163,27 +199,28 @@ aside .second-list {
 }
 
 .create i {
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: bold;
+
 }
-
-
 
 
 
 
 aside .block-down .install svg {
     display: inline-block;
-    width: 13px;
+    width: 15px;
 }
 
 aside .block-down .install {
+    width: calc(100% - 20px);
     display: flex;
-    gap: .3rem;
     align-items: center;
+    margin-left: 9.4px;
+    gap: .3rem;
     margin-bottom: .5rem;
     color: #a3a3a3;
-    padding-bottom: .3rem;
+    padding-bottom: .4rem;
     border-bottom: 1px solid #a3a3a3;
 }
 
@@ -201,31 +238,41 @@ aside .block-down .profile svg {
     gap: .3rem;
     color: white;
     font-weight: 600;
+    border-left: 3px solid black;
+    padding-left: .4rem;
+    padding-bottom: .4rem;
 }
 
 
 
 /* Aside Hover  */
 
- .first-list .hv-wht svg path:hover {
-    fill: red;
-}
-
-/* .hv-wht:hover {
-    color: white;
+.hv-wht:hover {
     cursor: pointer;
+    color: white;
 }
 
-.hv-wht:hover div {
+aside li:hover svg path {
+    cursor: pointer;
+    fill:white
+}
+
+.create:hover .cube {
+    cursor: pointer;
     background-color: white;
-} */
+}
+
+.install:hover span {
+    cursor: pointer;
+    color: white;
+}
 
 
 
 
 /* Aside Media Queries */
 
-@media (max-width: 552px)  {
+@media (min-width:480px) and (max-width: 552px)  {
 
 
     aside {
@@ -242,23 +289,42 @@ aside .block-down .profile svg {
         display: none;
     }
 
+    aside .block-up .home {
+        border-color: black;
+    }
+
     .first-list span {
         display: none;
     }
 
-    .playlist {
+    aside .playlist {
         display: none;
+        margin-top: .6rem;
     }
 
-    .block-down .install {
-        justify-content: center;
-    
+    aside .block-up .block-up-content {
+        margin-top: 0;
+
     }
 
-    .block-down .profile {
-        justify-content: center;
-      
+    aside .block-down {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
+
+
+    aside .block-down .install {
+        border: none;
+        flex-basis: 100%;
+        
+    }
+
+    aside .block-down .profile {
+        padding-left: 9.4px;
+        border: none;
+    }
+
 
     .block-down .install span {
         display: none;
@@ -268,6 +334,21 @@ aside .block-down .profile svg {
         display: none;
     }
 }
+
+@media (min-width: 553px) and (max-width: 1440px) {
+    aside .block-up {
+        margin-bottom: .4rem;
+    }
+
+    aside .profile {
+        font-size: ;
+    }
+
+    aside .playlist {
+        margin-top: .6rem;
+    }
+}
+
 
 
 
@@ -284,7 +365,7 @@ aside .block-down .profile svg {
 }
 
 .contents ul {
-    font-size: .65rem;
+    white-space: nowrap;
     font-weight: 700;
     color: #c1c1c1;
     display: flex;
@@ -299,7 +380,11 @@ aside .block-down .profile svg {
 .on-evidence {
     display: flex;
     flex-direction: column;
+}
 
+.contents .on-evidence span {
+    font-weight: 700;
+    color: #c1c1c1;
 }
 
 .underline {
@@ -310,15 +395,10 @@ aside .block-down .profile svg {
 }
 
 
-.contents h2 {
-    font-size: 1.2rem;
-}
-
 .contents h3 {
-    font-size: .8rem;
     text-align: center;
     margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-bottom: .3rem;
 }
 
 .contents span {
@@ -402,6 +482,14 @@ aside .block-down .profile svg {
     color: white;
 }
 
+.contents ul li span:hover {
+    cursor: pointer;
+    color: white;
+}
+
+
+
+
 .img-container:hover .album-layover {
     cursor: pointer;
     z-index: 20;;
@@ -409,11 +497,13 @@ aside .block-down .profile svg {
 
 
 
+
 @media (max-width: 552px) {
 
     .contents ul li {
         flex-basis: calc(25% - 1.2rem);
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     .album-container-first .album-block {
@@ -429,6 +519,10 @@ aside .block-down .profile svg {
 }
 
 @media (min-width: 553px) and (max-width: 639px) {
+
+    .contents .ul {
+        white-space: normal;
+    }
 
     .contents ul li {
         flex-basis: calc(100% / 3 - 1.2rem);
@@ -454,6 +548,13 @@ aside .block-down .profile svg {
     }
 
     .album-container-first .album-block {
+        flex-basis: calc(100% / 4 - 1rem);
+    }
+
+    .album-container-second .album-block {
+        flex-basis: calc(100% / 4 - 1rem);
+    }
+    .album-container-third .album-block {
         flex-basis: calc(100% / 4 - 1rem);
     }
 
