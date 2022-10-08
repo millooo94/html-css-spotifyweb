@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 html {
     font-family: 'Montserrat', sans-serif;
 }
@@ -12,6 +11,8 @@ html {
 img {
     width: 100%;
 }
+
+
 
 /* General Styles  */
 
@@ -31,8 +32,6 @@ img {
 .text-medium {
     font-size: .7rem;
 }
-
-
 
 body {
     display: flex;
@@ -54,16 +53,11 @@ aside {
     overflow-y: auto;
 }
 
-
-
-
-
 aside .logo-container {
     border-top: 3px solid black;
     padding-left: .4rem;
     border-left: 3px solid black;
     padding-top: .4rem;
-
 }
 
 aside .logo-small {
@@ -83,14 +77,12 @@ aside .first-list {
     list-style: none;
     color: #a3a3a3;
     font-weight: 700;
-    position: relative;
-    
+    position: relative; 
 }
 
 aside .first-list li {
     display: flex;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 svg {
@@ -104,13 +96,11 @@ svg {
 .playlist {
     margin-top: 1rem;
     color: white;
-
 }
 
 .playlist > span {
     border-left: 3px solid black;
     padding-left: .4rem;
-
 }
 
 aside .playlist .playlist-title {
@@ -201,11 +191,7 @@ aside .second-list {
 .create i {
     font-size: .9rem;
     font-weight: bold;
-
 }
-
-
-
 
 aside .block-down .install svg {
     display: inline-block;
@@ -266,7 +252,6 @@ aside li:hover svg path {
     cursor: pointer;
     color: white;
 }
-
 
 
 
@@ -335,6 +320,8 @@ aside li:hover svg path {
     }
 }
 
+
+
 @media (min-width: 553px) and (max-width: 1440px) {
     aside .block-up {
         margin-bottom: .4rem;
@@ -348,8 +335,6 @@ aside li:hover svg path {
         margin-top: .6rem;
     }
 }
-
-
 
 
 
@@ -376,7 +361,6 @@ aside li:hover svg path {
     margin-bottom: 1.5rem;
 }
 
-
 .on-evidence {
     display: flex;
     flex-direction: column;
@@ -394,7 +378,6 @@ aside li:hover svg path {
     align-self: center;
 }
 
-
 .contents h3 {
     text-align: center;
     margin-top: .5rem;
@@ -408,9 +391,7 @@ aside li:hover svg path {
 .contents .first-section span {
     display: flex;
     justify-content: center;
-
 }
-
 
 .album-container-first {
     display: flex;
@@ -435,7 +416,6 @@ aside li:hover svg path {
     margin-bottom: 1.5rem;
 }
 
-
 .album-container-first .album-block {
     flex: 0 0 calc(100% / 6 - 1rem);
 }
@@ -456,7 +436,6 @@ aside li:hover svg path {
     position: relative;
 }
 
-
 .album-layover {
     display: flex;
     z-index: -20;
@@ -475,6 +454,7 @@ aside li:hover svg path {
 }
 
 
+
 /* Contents hover */
 
 .contents ul li:hover {
@@ -486,9 +466,6 @@ aside li:hover svg path {
     cursor: pointer;
     color: white;
 }
-
-
-
 
 .img-container:hover .album-layover {
     cursor: pointer;
@@ -514,8 +491,9 @@ aside li:hover svg path {
     .album-container-third .album-block {
         flex-basis: calc(50% - 1rem);
     }
-
 }
+
+
 
 @media (min-width: 553px) and (max-width: 639px) {
 
@@ -538,6 +516,8 @@ aside li:hover svg path {
         flex-basis: calc(50% - 1rem);
     }
 }
+
+
 
 @media (min-width: 640px) and (max-width: 876px) {
 
@@ -563,6 +543,7 @@ aside li:hover svg path {
 }
 
 
+
 /* Footer */
 
 footer {
@@ -581,8 +562,7 @@ footer .block-left {
     display: flex;
     align-items: center;
     gap: 2rem;
-    flex: 0 1 calc(100% / 6);
-    
+    flex: 0 1 calc(100% / 6); 
 }
 
 footer .album-block {
@@ -610,7 +590,6 @@ footer .album-name {
     color: white;
 }
 
-
 footer .icons-block {
     display: flex;
     gap: .5rem;
@@ -620,14 +599,6 @@ footer .icons-block {
     font-size: .8rem;
     color: #a3a3a3;
 }
-
-
-
-
-
-
-
-
 
 footer .block-center {
     display: flex;
@@ -649,7 +620,6 @@ footer .block-center .up-bar {
     font-size: 1.5rem;
 }
 
-
 footer .block-center .down-bar {
     
     display: flex;
@@ -670,13 +640,11 @@ footer .block-center .down-bar .music-bar {
     flex: 0 1 100%
 }
 
-
 .music-bar i {
     display: none;
     font-size: .7rem;
     color: white; 
 }
-
 
 .block-center .music-bar .long {
     flex-basis: 75%;
@@ -689,9 +657,6 @@ footer .block-center .down-bar .music-bar {
     height: 3px;
     background-color: #c1c1c1;
 }
-
-
-
 
 .block-right {
     display: flex;
@@ -706,8 +671,6 @@ footer .block-center .down-bar .music-bar {
     display: flex;
     gap: 1rem;
 }
-
-
 
 .block-right .music-bar {
     height: 12px;
@@ -730,6 +693,8 @@ footer .block-center .down-bar .music-bar {
     background-color: #c1c1c1;
 }
 
+
+
 /* Footer Hover */
 
 .content-container .song-name:hover {
@@ -742,7 +707,6 @@ footer .block-center .down-bar .music-bar {
     cursor: pointer;
     color: white;
 }
-
 
 .block-center .up-bar .play:hover {
     cursor: pointer;
@@ -760,11 +724,6 @@ footer .block-center .down-bar .music-bar {
 
 
 
-
-
-
-
-
 @media (max-width: 552px) {
     .block-left .icons-block {
         flex-direction: column;
@@ -772,111 +731,6 @@ footer .block-center .down-bar .music-bar {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.footer-block-left {
-    flex: 0 1 calc(100% / 3);
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.footer-album-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-}
-
-.footer-image-container {
-    flex: 1 0 40px;
-}
-
-.footer-content-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.music-bar {
-    flex-basis: 100%;
-}
-
-.music-bar-long {
-    flex-basis: 75%;
-    height: 3px;
-    background-color: blueviolet;
-}
-
-.music-bar-short {
-    display: inline-block;
-    flex-basis: 25%;
-    height: 3px;
-    background-color: lightcoral;
-}
-
-.footer-block-center {
-    flex-basis: calc(100% / 3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-block-center .up-bar {
-    display: flex;
-    gap: 1rem;
-
-
-}
-
-.up-bar {
-    width: 100%;
-}
-
-.down-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.music-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.music-bar-dot {
-
-    clip-path: circle();
-    width: 1rem;
-    height: 1rem;
-    background-color: crimson;
-}
-
-.footer-block-right {
-    display: flex;
-    align-items: center;
-}
-
-.footer-block-right .icons-bar {
-    display: flex;
-    gap: 1rem;
-} */
 
 
 /* Popup */
@@ -909,6 +763,8 @@ footer .block-center .down-bar .music-bar {
     position: relative;
     z-index: 1000;
 }
+
+
 
 /* Popup Hover */
 
